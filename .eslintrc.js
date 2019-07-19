@@ -22,11 +22,19 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
     'plugin:prettier/recommended',
-    'prettier/@typescript-eslint',
+    'prettier/react',
+    'prettier/standard'
   ],
   plugins: ['@typescript-eslint', 'react'],
 
-  rules: {},
+  rules: {
+    'no-console': 'warn',
+    'no-dupe-class-members': 'off',
+    'no-unused-vars': 'off',
+    'no-useless-constructor': 'off',
+    '@typescript-eslint/no-useless-constructor': 'error',
+    '@typescript-eslint/no-unused-vars': 'error'
+  },
 };
