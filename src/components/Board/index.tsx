@@ -1,25 +1,27 @@
 import React from 'react';
 import Square from '../Square';
+import { BoardState } from '../../interfaces/Board';
+import calculateWinner from '../../helper/calculateWinner';
 
-type SquareType = string | null;
-
-interface BoardState {
-  squares: SquareType[];
-}
-
-class Board extends React.Component<BoardState, any> {
+export default class Board extends React.Component<{}, BoardState> {
   constructor(props: BoardState) {
     super(props);
     this.state = {
       squares: Array(9).fill(null),
+      xIsNext: true,
     };
   }
 
   handleClick(i: number) {
-    const squares = this.state.squares.slice();
-    squares[i] = 'X';
-    this.setState({ squares });
+    const squares = [...this.state.squares];
+    if (calculateWinner(squares) || squares[i]) {
+      return;
+    }
+
+    squares[i] = this.state.xIsNext ? 'X' : 'O';
+    this.setState({ squares, xIsNext: !this.state.xIsNext });
   }
+
   renderSquare(i: number) {
     return (
       <Square
@@ -30,7 +32,13 @@ class Board extends React.Component<BoardState, any> {
   }
 
   render() {
-    const status = 'Next player: X';
+    const winner = calculateWinner(this.state.squares);
+    let status;
+    if (winner) {
+      status = `Winner: ${winner}`;
+    } else {
+      status = `Next player: ${this.state.xIsNext ? 'X' : 'O'}`;
+    }
 
     return (
       <div>
@@ -54,5 +62,3 @@ class Board extends React.Component<BoardState, any> {
     );
   }
 }
-
-export default Board;

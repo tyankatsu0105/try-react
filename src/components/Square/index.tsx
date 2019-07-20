@@ -1,11 +1,7 @@
 import React from 'react';
+import { SquareProps } from '../../interfaces/Square';
 
-interface SquareProps {
-  value: number;
-  onClick: () => void;
-}
-
-function Square(props: SquareProps) {
+export default function Square(props: SquareProps) {
   const { onClick, value } = props;
   return (
     <button className="square" onClick={onClick}>
@@ -13,5 +9,3 @@ function Square(props: SquareProps) {
     </button>
   );
 }
-
-export default Square;
