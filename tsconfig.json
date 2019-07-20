@@ -41,7 +41,12 @@
     /* モジュール解決のオプション */
     "moduleResolution": "node",            /* モジュールの解決方法を指定します: 'node' (Node.js) または 'classic' (TypeScript pre-1.6)。 */
     "baseUrl": "./",                       /* 相対モジュール名を解決するためのベース ディレクトリ。 */
-    // "paths": {},                           /* 'baseUrl' の相対的な場所を検索するためにインポートを再マップする一連のエントリ。 */
+    "paths": {
+      "@src/*": ["src/*"],
+      "@interfaces/*": ["src/interfaces/*"],
+      "@components/*": ["src/components/*"],
+      "@helpers/*": ["src/helpers/*"],
+    },                           /* 'baseUrl' の相対的な場所を検索するためにインポートを再マップする一連のエントリ。 */
     // "rootDirs": [],                        /* 結合されたコンテンツがランタイムでのプロジェクトの構成を表すルート フォルダーの一覧。 */
     // "typeRoots": [],                       /* 含める型定義の元のフォルダーの一覧。 */
     // "types": [],                           /* コンパイルに含む型宣言ファイル。 */

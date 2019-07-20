@@ -1,7 +1,7 @@
 import React from 'react';
-import Square from '../Square';
-import { BoardState } from '../../interfaces/Board';
-import calculateWinner from '../../helper/calculateWinner';
+import Square from '@components/Square';
+import { BoardState } from '@interfaces/Board';
+import calculateWinner from '@helpers/calculateWinner';
 
 export default class Board extends React.Component<{}, BoardState> {
   constructor(props: BoardState) {

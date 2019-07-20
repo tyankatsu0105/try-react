@@ -1,4 +1,4 @@
-import { SquareType } from '../interfaces/Square';
+import { SquareType } from '@interfaces/Square';
 
 export default function calculateWinner(squares: SquareType[]) {
   const lines = [
