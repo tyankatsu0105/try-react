@@ -1,6 +1,6 @@
 import { SquareType } from '@interfaces/Square';
 
-export interface BoardState {
+export interface BoardProps {
   squares: SquareType[];
-  xIsNext: boolean;
+  onClick: (i: number) => void;
 }
