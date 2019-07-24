@@ -1,16 +1,12 @@
-import React from 'react';
-import Game from '@components/Game';
+import React, { FC } from 'react';
+import { Header } from '@layouts/Header';
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className="game">
-        <div className="game-board">
-          <Game />
-        </div>
-      </div>
-    );
-  }
-}
-
-export default App;
+export const App: FC = () => {
+  return (
+    <>
+      <Header />
+      <main></main>
+      <footer></footer>
+    </>
+  );
+};
