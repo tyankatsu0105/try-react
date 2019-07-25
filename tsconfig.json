@@ -48,9 +48,14 @@
       "@helpers/*": ["src/helpers/*"],
       "@styles/*": ["src/styles/*"],
       "@layouts/*": ["src/layouts/*"],
+      "@pages/*": ["src/pages/*"],
+      "@assets/*": ["./assets/*"],
     },                           /* 'baseUrl' の相対的な場所を検索するためにインポートを再マップする一連のエントリ。 */
     // "rootDirs": [],                        /* 結合されたコンテンツがランタイムでのプロジェクトの構成を表すルート フォルダーの一覧。 */
-    // "typeRoots": [],                       /* 含める型定義の元のフォルダーの一覧。 */
+    "typeRoots": [
+      "src/types",
+      "node_modules/@types/"
+    ],                       /* 含める型定義の元のフォルダーの一覧。 */
     // "types": [],                           /* コンパイルに含む型宣言ファイル。 */
     // "allowSyntheticDefaultImports": true,  /* 既定のエクスポートがないモジュールからの既定のインポートを許可します。これは、型チェックのみのため、コード生成には影響を与えません。 */
     "esModuleInterop": true,                  /* すべてのインポートの名前空間オブジェクトを作成して、CommonJS と ES モジュール間の生成の相互運用性を有効にします。'allowSyntheticDefaultImports' を暗黙のうちに表します。 */

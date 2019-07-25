@@ -1,41 +1,90 @@
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const path = require('path');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const WriteFilePlugin = require('write-file-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+const root = './';
 
 module.exports = {
-  //   target: 'node',
-  entry: path.join(__dirname, 'src/index.tsx'),
+  context: path.resolve(root, 'src'),
+  entry: {
+    app: './index.tsx',
+  },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'app.js',
+    path: path.resolve(root, 'dist'),
   },
   module: {
     rules: [
-      { test: /\.(tsx)$/, use: 'babel-loader' },
+      {
+        loader: 'ts-loader',
+        test: /\.ts[x]?$/,
+        options: {
+          compilerOptions: {
+            sourceMap: true,
+          },
+          configFile: 'tsconfig.json',
+        },
+      },
       { test: /\.css$/, use: ['style-loader', 'css-loader'] },
       {
-        test: /\.tsx?$/,
-        loader: 'ts-loader',
+        use: [{ loader: 'html-loader', options: { minimize: true } }],
+        test: /\.html$/,
+      },
+      {
+        test: /\.(gif|png|jpg|eot|wof|woff|woff2|ttf|svg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 100 * 1024,
+              name: path.resolve(root, 'src', 'assets', '[name].[ext]'),
+            },
+          },
+        ],
       },
     ],
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'dist'),
+    contentBase: path.resolve(root, 'dist'),
     port: 3000,
     historyApiFallback: true,
   },
   resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.html'],
     plugins: [
       new TsconfigPathsPlugin({
-        configFile: path.join(__dirname, 'tsconfig.json'),
+        configFile: 'tsconfig.json',
       }),
     ],
-    extensions: ['.ts', '.tsx', '.js', '.json'],
   },
   plugins: [
+    new WriteFilePlugin(),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src', 'index.html'),
+      template: './index.html',
       filename: './index.html',
     }),
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(root, 'src', 'assets'),
+        to: 'assets',
+      },
+    ]),
   ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      maxSize: 200000,
+    },
+    runtimeChunk: true,
+  },
+  node: {
+    module: 'empty',
+    dgram: 'empty',
+    dns: 'mock',
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty',
+    child_process: 'empty',
+  },
 };

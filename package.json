@@ -36,7 +36,9 @@
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -45,16 +47,20 @@
     "@types/node": "^12.6.8",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
+    "@types/react-router": "^5.0.3",
+    "@types/react-router-dom": "^4.3.4",
     "@typescript-eslint/eslint-plugin": "^1.12.0",
     "@typescript-eslint/parser": "^1.12.0",
-    "babel-loader": "^8.0.6",
     "commitizen": "^4.0.3",
+    "copy-webpack-plugin": "^5.0.3",
     "css-loader": "^3.1.0",
     "cz-conventional-changelog": "^3.0.2",
     "eslint": "^6.0.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.2",
+    "file-loader": "^4.1.0",
+    "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "lint-staged": "^9.2.0",
     "prettier": "^1.18.2",
@@ -68,8 +74,10 @@
     "ts-loader": "^6.0.4",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
     "typescript": "^3.5.3",
+    "url-loader": "^2.1.0",
     "webpack": "^4.36.1",
     "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.7.2",
+    "write-file-webpack-plugin": "^4.5.0"
   }
 }
