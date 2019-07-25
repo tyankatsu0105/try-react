@@ -1,11 +1,17 @@
 import React, { FC } from 'react';
 import styled from '@emotion/styled';
 
-import { fontColor } from '@src/styles/variables/index.js';
+import { fontColor } from '@src/styles/variables/fonts.ts';
 
 const Nav = styled.nav`
-  background-color: black;
-  color: ${fontColor};
+  color: ${fontColor.primary};
+  box-shadow: 0 2px 5px #ccc;
+`;
+
+const Ul = styled.ul`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 `;
 
 const navLinks = [
@@ -27,11 +33,11 @@ export const Header: FC = () => {
   return (
     <header>
       <Nav>
-        <ul>
+        <Ul>
           {navLinks.map((navLink) => (
             <li key={navLink.id}>{navLink.text}</li>
           ))}
-        </ul>
+        </Ul>
       </Nav>
     </header>
   );
