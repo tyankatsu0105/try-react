@@ -9,8 +9,8 @@ export const App: FC = () => {
   return (
     <Container>
       <Switch>
-        <Route path="/" component={Home} />
         <Route path="/about" component={About} />
+        <Route path="/" component={Home} />
         <Redirect to="/" />
       </Switch>
     </Container>

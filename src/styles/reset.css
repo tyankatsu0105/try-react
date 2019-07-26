@@ -23,9 +23,9 @@ select,
 button,
 textarea
 {
-	margin:0;
+	/* margin:0; */
 	border:0;
-	padding:0;
+	/* padding:0; */
 	display:inline-block;
 	vertical-align:middle;
 	white-space:normal;
@@ -47,16 +47,16 @@ input:focus
 -----------------------------------------------*/
 
 /* All of our custom controls should be what we expect them to be */
-input,
+/* input,
 textarea
 {
 	-webkit-box-sizing:content-box;
 	-moz-box-sizing:content-box;
 	box-sizing:content-box;
-}
+} */
 
 /* These elements are usually rendered a certain way by the browser */
-button,
+/* button,
 input[type=reset],
 input[type=button],
 input[type=submit],
@@ -67,7 +67,7 @@ select
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
-}
+} */
 
 /* Text Inputs
 -----------------------------------------------*/
