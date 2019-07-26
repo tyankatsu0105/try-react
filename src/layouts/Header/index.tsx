@@ -22,17 +22,18 @@ const navLinks = [
   {
     text: 'Home',
     path: '/',
-    id: 'Home',
   },
   {
     text: 'About',
     path: '/about',
-    id: 'About',
   },
   {
     text: 'Contents',
     path: '/contents',
-    id: 'Contents',
+  },
+  {
+    text: 'Form',
+    path: '/form',
   },
 ];
 
@@ -46,7 +47,7 @@ export const Header: FC = () => {
       <Nav>
         <Ul>
           {navLinks.map((navLink) => (
-            <li key={navLink.id}>
+            <li key={navLink.path}>
               <NavLink activeStyle={navActiveStyle} exact to={navLink.path}>
                 <Span>{navLink.text}</Span>
               </NavLink>

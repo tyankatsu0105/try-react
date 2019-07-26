@@ -14,6 +14,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(root, 'dist'),
+    filename: '[name].bundle.js',
+    chunkFilename: '[name].bundle.js',
   },
   module: {
     rules: [

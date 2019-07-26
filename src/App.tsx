@@ -1,20 +1,24 @@
-import React, { FC } from 'react';
+import React, { FC, lazy, Suspense } from 'react';
 import { Redirect, Route, Switch } from 'react-router';
 
 import { Container } from '@layouts/Container';
-import { Home } from '@pages/Home/components';
-import About from '@pages/About/components';
-import { Contents } from '@pages/Contents/components';
+const Home = lazy(() => import('@pages/Home/components'));
+const About = lazy(() => import('@pages/About/components'));
+const Contents = lazy(() => import('@pages/Contents/components'));
+const Form = lazy(() => import('@pages/Form/components'));
 
 export const App: FC = () => {
   return (
     <Container>
-      <Switch>
-        <Route path="/about" component={About} />
-        <Route path="/contents" component={Contents} />
-        <Route path="/" component={Home} />
-        <Redirect to="/" />
-      </Switch>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Switch>
+          <Route path="/about" component={About} />
+          <Route path="/contents" component={Contents} />
+          <Route path="/form" component={Form} />
+          <Route path="/" component={Home} />
+          <Redirect to="/" />
+        </Switch>
+      </Suspense>
     </Container>
   );
 };

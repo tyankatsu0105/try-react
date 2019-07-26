@@ -3,7 +3,7 @@ import { CSSTransition } from 'react-transition-group';
 
 import '@styles/animations/fade.scss';
 
-export const Contents: FC = () => {
+const Contents: FC = () => {
   const [isShow, setIsShow] = useState(false);
   return (
     <>
@@ -19,3 +19,5 @@ export const Contents: FC = () => {
     </>
   );
 };
+
+export default Contents;
