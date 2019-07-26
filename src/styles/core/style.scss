@@ -1,0 +1,22 @@
+@import './reset';
+@import './variables';
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  font-size: 10px;
+  line-height: var(--line-height-default);
+  color: var(--color-font-primary);
+}
+
+a,
+button,
+input {
+  transition: var(--transition-default);
+}
+
+button {
+  cursor: pointer;
+}

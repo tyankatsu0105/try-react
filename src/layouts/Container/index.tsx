@@ -16,7 +16,7 @@ export const Container: FC = (props: LayoutProps) => {
   return (
     <Div>
       <Header />
-      {props.children}
+      <div>{props.children}</div>
       <Footer />
     </Div>
   );

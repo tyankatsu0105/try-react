@@ -1,0 +1,11 @@
+.fade-enter,
+.fade-enter-done {
+  opacity: 1;
+  transition: opacity var(--transition-default);
+}
+
+.fade-exit,
+.fade-exit-done {
+  opacity: 0;
+  transition: opacity var(--transition-default);
+}

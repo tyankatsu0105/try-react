@@ -2,11 +2,8 @@ import React, { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from '@emotion/styled';
 
-import { fontColor } from '@src/styles/variables/fonts.ts';
-
 const Nav = styled.nav`
   font-size: 2rem;
-  color: ${fontColor.primary};
   box-shadow: 0 2px 5px #ccc;
 `;
 
@@ -14,6 +11,11 @@ const Ul = styled.ul`
   display: flex;
   align-items: center;
   justify-content: space-around;
+`;
+
+const Span = styled.span`
+  display: block;
+  padding: calc(var(--spacer-base) * 2) calc(var(--spacer-base) * 4);
 `;
 
 const navLinks = [
@@ -34,6 +36,10 @@ const navLinks = [
   },
 ];
 
+const navActiveStyle = {
+  color: 'red',
+};
+
 export const Header: FC = () => {
   return (
     <header>
@@ -41,8 +47,8 @@ export const Header: FC = () => {
         <Ul>
           {navLinks.map((navLink) => (
             <li key={navLink.id}>
-              <NavLink activeStyle={{ color: 'red' }} exact to={navLink.path}>
-                {navLink.text}
+              <NavLink activeStyle={navActiveStyle} exact to={navLink.path}>
+                <Span>{navLink.text}</Span>
               </NavLink>
             </li>
           ))}

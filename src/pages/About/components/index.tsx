@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { RouteComponentProps } from 'react-router';
+import { RouteComponentProps, withRouter } from 'react-router';
 import styled from '@emotion/styled';
 // import spinach from './assets/images/spinach.png';
 
@@ -19,7 +19,7 @@ const Button = styled.button`
   }
 `;
 
-export const About: FC<AboutProps> = ({ match, history }: AboutProps) => {
+const About: FC<AboutProps> = ({ match, history }: AboutProps) => {
   return (
     <>
       <h1>{match.path}</h1>
@@ -38,3 +38,5 @@ export const About: FC<AboutProps> = ({ match, history }: AboutProps) => {
     </>
   );
 };
+
+export default withRouter(About);
