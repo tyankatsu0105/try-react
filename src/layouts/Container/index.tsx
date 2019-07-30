@@ -1,9 +1,10 @@
 import React, { FC } from 'react';
 import styled from '@emotion/styled';
-import { LayoutProps } from '@interfaces/LayoutProps';
 
 import { Header } from '@layouts/Header';
 import { Footer } from '@layouts/Footer';
+
+import { MainProps } from '@interfaces/MainProps';
 
 const Div = styled.div`
   display: grid;
@@ -12,11 +13,19 @@ const Div = styled.div`
   min-height: 100vh;
 `;
 
-export const Container: FC = (props: LayoutProps) => {
+const Main = styled.main`
+  width: 980px;
+  margin: calc(var(--spacer-base) * 2) auto;
+  font-size: 1.6rem;
+`;
+
+export const Container: FC = (props: MainProps) => {
   return (
     <Div>
       <Header />
-      <div>{props.children}</div>
+      <div>
+        <Main>{props.children}</Main>
+      </div>
       <Footer />
     </Div>
   );

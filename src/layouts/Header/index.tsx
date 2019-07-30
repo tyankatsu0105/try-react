@@ -35,6 +35,10 @@ const navLinks = [
     text: 'Form',
     path: '/form',
   },
+  {
+    text: 'Context',
+    path: '/context',
+  },
 ];
 
 const navActiveStyle = {

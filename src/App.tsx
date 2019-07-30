@@ -6,6 +6,7 @@ const Home = lazy(() => import('@pages/Home/components'));
 const About = lazy(() => import('@pages/About/components'));
 const Contents = lazy(() => import('@pages/Contents/components'));
 const Form = lazy(() => import('@pages/Form/components'));
+const Context = lazy(() => import('@pages/Context/components'));
 
 export const App: FC = () => {
   return (
@@ -15,6 +16,7 @@ export const App: FC = () => {
           <Route path="/about" component={About} />
           <Route path="/contents" component={Contents} />
           <Route path="/form" component={Form} />
+          <Route path="/context" component={Context} />
           <Route path="/" component={Home} />
           <Redirect to="/" />
         </Switch>
