@@ -1,17 +1,5 @@
-import React, {
-  FC,
-  useState,
-  useCallback,
-  ChangeEvent,
-  useEffect,
-} from 'react';
+import React, { FC, useState, useCallback, ChangeEvent } from 'react';
 import styled from '@emotion/styled';
-
-const useChangeTitle = (props: string) => {
-  useEffect(() => {
-    document.title = `titleは${props}です`;
-  }, [props]);
-};
 
 export const State: FC = () => {
   const [state, setState] = useState(0);
@@ -19,15 +7,6 @@ export const State: FC = () => {
     hoge: '佐藤',
     fuga: '田中',
   });
-
-  useChangeTitle(String(state));
-
-  useEffect(() => {
-    document.body.classList.add(name.hoge);
-    return () => {
-      alert(name.hoge);
-    };
-  }, [name.hoge]);
 
   const handleIncreaseState = useCallback(() => {
     setState(state + 1);
