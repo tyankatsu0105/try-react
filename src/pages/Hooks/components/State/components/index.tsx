@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState, useCallback, ChangeEvent } from 'react';
 import styled from '@emotion/styled';
 
 export const State: FC = () => {
@@ -7,21 +7,16 @@ export const State: FC = () => {
     hoge: '佐藤',
     fuga: '田中',
   });
-  const handleIncreaseState = () => {
+
+  const handleIncreaseState = useCallback(() => {
     setState(state + 1);
-  };
-  const handleDecreaseState = () => {
+  }, [state]);
+
+  const handleDecreaseState = useCallback(() => {
     setState(state - 1);
-  };
+  }, [state]);
 
-  interface Event {
-    target: {
-      name: string;
-      value: string;
-    };
-  }
-
-  const handleUpdateName = (event: Event) => {
+  const handleUpdateName = (event: ChangeEvent<HTMLInputElement>) => {
     setName({
       ...name,
       [event.target.name]: event.target.value,
