@@ -4,11 +4,23 @@ const WriteFilePlugin = require('write-file-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const Fiber = require('fibers');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const root = './';
 
 module.exports = {
   context: path.resolve(root, 'src'),
+  optimization: {
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          output: {
+            comments: 'all',
+          },
+        },
+      }),
+    ],
+  },
   entry: {
     app: './index.tsx',
   },
