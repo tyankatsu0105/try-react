@@ -43,6 +43,10 @@ const navLinks = [
     text: 'Hooks',
     path: '/hooks',
   },
+  {
+    text: 'Redux',
+    path: '/redux',
+  },
 ];
 
 const navActiveStyle = {
