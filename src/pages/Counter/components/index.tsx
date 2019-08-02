@@ -9,7 +9,7 @@ export interface CounterProps {
 
 const amount: number = 10;
 
-const Redux: FC<CounterProps> = ({
+const Counter: FC<CounterProps> = ({
   count = 0,
   add = () => {},
   decrement = () => {},
@@ -25,4 +25,4 @@ const Redux: FC<CounterProps> = ({
   );
 };
 
-export default Redux;
+export default Counter;

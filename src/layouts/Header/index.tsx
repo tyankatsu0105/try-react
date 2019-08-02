@@ -44,8 +44,8 @@ const navLinks = [
     path: '/hooks',
   },
   {
-    text: 'Redux',
-    path: '/redux',
+    text: 'Counter',
+    path: '/counter',
   },
 ];
 

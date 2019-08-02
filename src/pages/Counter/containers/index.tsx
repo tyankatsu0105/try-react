@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators, Dispatch } from 'redux';
 
 import { add, decrement, increment } from '@actions/counter';
-import Redux from '@pages/Redux/components';
+import Counter from '@pages/Counter/components';
 import { CounterState } from '@reducers/counter';
 
 interface stateProps {
@@ -25,4 +25,4 @@ const mapDispatchToProps = (dispatch: Dispatch): DispatchProps =>
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Redux);
+)(Counter);
