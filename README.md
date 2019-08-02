@@ -1,4 +1,11 @@
-ReactのチュートリアルをTSで進めてます。
+# デザインパターン
 
-参考
-[TypeScriptを使ってreactのチュートリアルを進めると捗るかなと思った\(実際捗る\) \- Qiita](https://qiita.com/m0a/items/d723259cdeebe382b5f6)
+Redux => Re-ducks
+
+# メモ
+
+- selector => state からほしいやつをセレクトするから（たぶん）
+- react-redux7.1 で hooks きたので、使っていく
+- 名前がバッティングするので、actions 内では `addAction` みたいに suffix 付けると良い
+  - じゃないと container で import して dispatch するときの変数名考えるときに死ぬ
+- Flux Standard Action

@@ -2,6 +2,7 @@ import React, { FC, lazy, Suspense } from 'react';
 import { Redirect, Route, Switch } from 'react-router';
 
 import { Container } from '@layouts/Container';
+
 const Home = lazy(() => import('@pages/Home/components'));
 const About = lazy(() => import('@pages/About/components'));
 const Contents = lazy(() => import('@pages/Contents/components'));
