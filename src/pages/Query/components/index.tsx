@@ -1,27 +1,9 @@
 import React, { FC } from 'react';
-import gql from 'graphql-tag';
+import queryQuery from '@api/graphql/pages/Query.graphql';
 import { useQuery } from '@apollo/react-hooks';
 
-const query = gql`
-  query {
-    organization(login: "apollographql") {
-      repositories(first: 5) {
-        nodes {
-          id
-          name
-          url
-          viewerHasStarred
-          stargazers {
-            totalCount
-          }
-        }
-      }
-    }
-  }
-`;
-
 const Query: FC = () => {
-  const { loading, data } = useQuery(query);
+  const { loading, data } = useQuery(queryQuery);
 
   return (
     <>

@@ -80,9 +80,8 @@ module.exports = {
           },
         ],
       },
-
       {
-        test: /\.(gql)$/,
+        test: /\.(graphql)$/,
         exclude: /node_modules/,
         loader: 'graphql-tag/loader',
       },
