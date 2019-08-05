@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import queryQuery from '@api/graphql/pages/Query.graphql';
+import queryQuery from '@api/graphql/queries/pages/Query.graphql';
 import { useQuery } from '@apollo/react-hooks';
 
 const Query: FC = () => {
