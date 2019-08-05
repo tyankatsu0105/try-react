@@ -43,6 +43,10 @@ const navLinks = [
     text: 'Hooks',
     path: '/hooks',
   },
+  {
+    text: 'Query',
+    path: '/query',
+  },
 ];
 
 const navActiveStyle = {

@@ -44,13 +44,11 @@
     "paths": {
       "@src/*": ["src/*"],
       "@interfaces/*": ["src/interfaces/*"],
-      "@components/*": ["src/components/*"],
-      "@helpers/*": ["src/helpers/*"],
       "@styles/*": ["src/styles/*"],
       "@layouts/*": ["src/layouts/*"],
       "@pages/*": ["src/pages/*"],
       "@assets/*": ["src/assets/*"],
-      "@state/*": ["src/state/*"],
+      "@api/*": ["src/api/*"],
     },                           /* 'baseUrl' の相対的な場所を検索するためにインポートを再マップする一連のエントリ。 */
     // "rootDirs": [],                        /* 結合されたコンテンツがランタイムでのプロジェクトの構成を表すルート フォルダーの一覧。 */
     "typeRoots": [
