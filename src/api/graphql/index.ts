@@ -1,15 +1,15 @@
 import { ApolloClient } from 'apollo-client';
-import { createHttpLink } from 'apollo-link-http';
+import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
+import { concat } from 'apollo-link';
+import { authMiddleware } from './middleware';
 
-const link = createHttpLink({
-  uri: 'https://api.github.com/graphql',
-  headers: {
-    authorization: `Bearer ${process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN}`,
-  },
-});
+const httpLink = new HttpLink({ uri: 'https://api.github.com/graphql' });
+
+const link = concat(authMiddleware, httpLink);
+const cache = new InMemoryCache();
 
 export const client = new ApolloClient({
   link,
-  cache: new InMemoryCache(),
+  cache,
 });

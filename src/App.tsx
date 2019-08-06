@@ -9,7 +9,7 @@ const Contents = lazy(() => import('@pages/Contents/components'));
 const Form = lazy(() => import('@pages/Form/components'));
 const Context = lazy(() => import('@pages/Context/components'));
 const Hooks = lazy(() => import('@pages/Hooks/components'));
-const Query = lazy(() => import('@pages/Query/components'));
+const Api = lazy(() => import('@src/pages/Api/components'));
 
 export const App: FC = () => {
   return (
@@ -21,7 +21,7 @@ export const App: FC = () => {
           <Route path="/form" component={Form} />
           <Route path="/context" component={Context} />
           <Route path="/hooks" component={Hooks} />
-          <Route path="/query" component={Query} />
+          <Route path="/api" component={Api} />
           <Route path="/" component={Home} />
           <Redirect to="/" />
         </Switch>

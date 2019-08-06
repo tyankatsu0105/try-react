@@ -44,8 +44,8 @@ const navLinks = [
     path: '/hooks',
   },
   {
-    text: 'Query',
-    path: '/query',
+    text: 'Api',
+    path: '/api',
   },
 ];
 

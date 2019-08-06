@@ -49,7 +49,6 @@
     "graphql": "^14.4.2",
     "graphql-tag": "^2.10.1",
     "react": "^16.8.6",
-    "react-apollo": "^2.5.8",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
