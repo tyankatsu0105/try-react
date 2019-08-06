@@ -1,4 +1,4 @@
-query {
+query ApiQuery {
   organization(login: "facebook") {
     repositories(first: 100) {
       nodes {
