@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FunctionComponent } from 'react';
 import { RouteComponentProps, withRouter } from 'react-router';
 import styled from '@emotion/styled';
 // import spinach from './assets/images/spinach.png';
@@ -19,7 +19,10 @@ const Button = styled.button`
   }
 `;
 
-const About: FC<AboutProps> = ({ match, history }: AboutProps) => {
+const About: FunctionComponent<AboutProps> = ({
+  match,
+  history,
+}: AboutProps) => {
   return (
     <>
       <h1>{match.path}</h1>

@@ -1,7 +1,12 @@
-import React, { FC, useState, useCallback, ChangeEvent } from 'react';
+import React, {
+  FunctionComponent,
+  useState,
+  useCallback,
+  ChangeEvent,
+} from 'react';
 import styled from '@emotion/styled';
 
-export const State: FC = () => {
+export const State: FunctionComponent = () => {
   const [state, setState] = useState(0);
   const [name, setName] = useState({
     hoge: '佐藤',

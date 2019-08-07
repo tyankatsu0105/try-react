@@ -1,8 +1,8 @@
-import React, { FC, createContext, useContext } from 'react';
+import React, { FunctionComponent, createContext, useContext } from 'react';
 
 const NameContext = createContext('tyankatsu');
 
-const Parent: FC = () => {
+const Parent: FunctionComponent = () => {
   return (
     <>
       <Child />
@@ -10,7 +10,7 @@ const Parent: FC = () => {
   );
 };
 
-const Child: FC = () => {
+const Child: FunctionComponent = () => {
   return (
     <div>
       <p>{useContext(NameContext)}</p>
@@ -18,7 +18,7 @@ const Child: FC = () => {
   );
 };
 
-const Context: FC = () => {
+const Context: FunctionComponent = () => {
   return (
     <div>
       <NameContext.Provider value="hogehoge">

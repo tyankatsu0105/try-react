@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
+import React, { FunctionComponent } from 'react';
 
-const Form: FC = () => {
+const Form: FunctionComponent = () => {
   return (
     <>
       <a href="">aaaa</a>

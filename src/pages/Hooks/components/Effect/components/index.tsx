@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react';
+import React, { FunctionComponent, useEffect } from 'react';
 
 const useChangeTitle = (props: string) => {
   useEffect(() => {
@@ -6,7 +6,7 @@ const useChangeTitle = (props: string) => {
   }, [props]);
 };
 
-export const Effect: FC = () => {
+export const Effect: FunctionComponent = () => {
   useChangeTitle('aaa');
 
   return (

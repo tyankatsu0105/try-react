@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
 
 const Copyright = styled.small`
@@ -7,7 +7,7 @@ const Copyright = styled.small`
   text-align: center;
 `;
 
-export const Footer: FC = () => {
+export const Footer: FunctionComponent = () => {
   return (
     <footer>
       <Copyright>

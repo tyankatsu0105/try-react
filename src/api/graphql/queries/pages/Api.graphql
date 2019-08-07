@@ -1,15 +1,8 @@
-query ApiQuery($login: String!) {
-  organization(login: $login) {
-    repositories(first: 100) {
-      nodes {
-        id
-        name
-        url
-        viewerHasStarred
-        stargazers {
-          totalCount
-        }
-      }
+query GetTyankatsuRepository($login: String!, $name: String!) {
+  user(login: $login) {
+    repository(name: $name) {
+      name
+      url
     }
   }
 }

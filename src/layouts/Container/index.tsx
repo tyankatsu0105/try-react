@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
 
 import { Header } from '@layouts/Header';
@@ -19,7 +19,7 @@ const Main = styled.main`
   font-size: 1.6rem;
 `;
 
-export const Container: FC = (props: MainProps) => {
+export const Container: FunctionComponent = (props: MainProps) => {
   return (
     <Div>
       <Header />

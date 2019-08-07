@@ -1,9 +1,9 @@
-import React, { FC } from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { State } from '@pages/Hooks/components/State/components';
 import { Effect } from '@pages/Hooks/components/Effect/components';
 
-const Hooks: FC = () => {
+const Hooks: FunctionComponent = () => {
   return (
     <>
       <State />

@@ -1,9 +1,9 @@
-import React, { FC, useState } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
 import '@styles/animations/fade.scss';
 
-const Contents: FC = () => {
+const Contents: FunctionComponent = () => {
   const [isShow, setIsShow] = useState(false);
   return (
     <>

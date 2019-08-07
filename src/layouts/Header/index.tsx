@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FunctionComponent } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from '@emotion/styled';
 
@@ -53,7 +53,7 @@ const navActiveStyle = {
   color: 'red',
 };
 
-export const Header: FC = () => {
+export const Header: FunctionComponent = () => {
   return (
     <header>
       <Nav>
