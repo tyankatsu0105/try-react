@@ -6,16 +6,24 @@ import { ApiQuery_organization_repositories_nodes } from '@api/graphql/queries/p
 const Api: FC = () => {
   const { loading, data } = useQuery(gqlApi);
 
-  const list = data.organization.repositories.nodes.map(
-    (node: ApiQuery_organization_repositories_nodes, index: number) => (
-      <li key={node.id}>
-        <h1>{index + 1}</h1>
-        <a href={node.url}>{node.name}</a>
-      </li>
-    )
+  return (
+    <>
+      {loading ? (
+        <p>Loading ......</p>
+      ) : (
+        <ul>
+          {data.organization.repositories.nodes.map(
+            (node: ApiQuery_organization_repositories_nodes, index: number) => (
+              <li key={node.id}>
+                <h1>{index + 1}</h1>
+                <a href={node.url}>{node.name}</a>
+              </li>
+            )
+          )}
+        </ul>
+      )}
+    </>
   );
-
-  return <>{loading ? <p>Loading ......</p> : <ul>{list}</ul>}</>;
 };
 
 export default Api;

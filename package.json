@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --hot --open",
+    "_start": "webpack-dev-server --hot --open",
+    "start": "run-p _start watch:codegen",
     "build": "webpack --config webpack.config.js --mode=production",
     "commit": "git-cz",
     "precommit": "lint-staged",
-    "gen:graphql-types": "apollo client:codegen --target=typescript"
+    "codegen": "apollo client:codegen --target=typescript --watch",
+    "watch:codegen": "apollo client:codegen --target=typescript --watch"
   },
   "config": {
     "commitizen": {
@@ -85,6 +87,7 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "lint-staged": "^9.2.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
     "sass": "^1.22.7",
     "sass-loader": "^7.1.0",
