@@ -57,3 +57,7 @@ export interface ApiQuery {
    */
   organization: ApiQuery_organization | null;
 }
+
+export interface ApiQueryVariables {
+  login: string;
+}

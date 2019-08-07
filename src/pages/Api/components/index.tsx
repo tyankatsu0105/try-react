@@ -1,10 +1,14 @@
 import React, { FC } from 'react';
 import gqlApi from '@api/graphql/queries/pages/Api.graphql';
 import { useQuery } from '@apollo/react-hooks';
-import { ApiQuery_organization_repositories_nodes } from '@api/graphql/queries/pages/__generated__/ApiQuery';
+import {
+  ApiQuery_organization_repositories_nodes,
+  ApiQueryVariables,
+} from '@api/graphql/queries/pages/__generated__/ApiQuery';
 
 const Api: FC = () => {
-  const { loading, data } = useQuery(gqlApi);
+  const variables: ApiQueryVariables = { login: 'facebook' };
+  const { loading, data } = useQuery(gqlApi, { variables });
 
   return (
     <>

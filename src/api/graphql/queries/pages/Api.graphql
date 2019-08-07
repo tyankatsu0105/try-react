@@ -1,5 +1,5 @@
-query ApiQuery {
-  organization(login: "facebook") {
+query ApiQuery($login: String!) {
+  organization(login: $login) {
     repositories(first: 100) {
       nodes {
         id
