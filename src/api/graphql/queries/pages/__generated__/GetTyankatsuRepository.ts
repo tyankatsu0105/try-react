@@ -7,37 +7,37 @@
 // ====================================================
 
 export interface GetTyankatsuRepository_user_repository {
-  __typename: "Repository";
+  readonly __typename: "Repository";
   /**
    * The name of the repository.
    */
-  name: string;
+  readonly name: string;
   /**
    * The HTTP URL for this repository
    */
-  url: any;
+  readonly url: any;
   /**
    * Returns a boolean indicating whether the viewing user has starred this starrable.
    */
-  viewerHasStarred: boolean;
+  readonly viewerHasStarred: boolean;
 }
 
 export interface GetTyankatsuRepository_user {
-  __typename: "User";
+  readonly __typename: "User";
   /**
    * Find Repository.
    */
-  repository: GetTyankatsuRepository_user_repository | null;
+  readonly repository: GetTyankatsuRepository_user_repository | null;
 }
 
 export interface GetTyankatsuRepository {
   /**
    * Lookup a user by login.
    */
-  user: GetTyankatsuRepository_user | null;
+  readonly user: GetTyankatsuRepository_user | null;
 }
 
 export interface GetTyankatsuRepositoryVariables {
-  login: string;
-  name: string;
+  readonly login: string;
+  readonly name: string;
 }

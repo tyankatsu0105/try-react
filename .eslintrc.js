@@ -33,6 +33,7 @@ module.exports = {
     'no-console': 'warn',
     'no-dupe-class-members': 'off',
     'no-unused-vars': 'off',
+    'react/prop-types': 'off',
     'no-useless-constructor': 'off',
     '@typescript-eslint/no-useless-constructor': 'error',
     '@typescript-eslint/no-unused-vars': 'error',

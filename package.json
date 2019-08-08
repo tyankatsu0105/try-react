@@ -8,8 +8,8 @@
     "build": "webpack --config webpack.config.js --mode=production",
     "commit": "git-cz",
     "precommit": "lint-staged",
-    "codegen": "apollo client:codegen --target=typescript --watch",
-    "watch:codegen": "apollo client:codegen --target=typescript --watch"
+    "codegen": "apollo client:codegen --target=typescript --useReadOnlyTypes",
+    "watch:codegen": "apollo client:codegen --target=typescript --useReadOnlyTypes --watch"
   },
   "config": {
     "commitizen": {

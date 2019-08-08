@@ -13,12 +13,15 @@ export const QueryContainer: FunctionComponent = () => {
     login: 'tyankatsu0105',
     name: 'try-react',
   };
-  const { loading, error, data } = useQuery<GetTyankatsuRepository>(gqlApi, {
-    variables,
-  });
+  const { loading, error, data, refetch } = useQuery<GetTyankatsuRepository>(
+    gqlApi,
+    {
+      variables,
+    }
+  );
 
   if (loading) return <p>Loading......</p>;
   if (error) return <p>Opps! Error! {error.message}</p>;
 
-  return <>{data ? <Query {...data} /> : null}</>;
+  return <>{data ? <Query {...data} refetch={refetch} /> : null}</>;
 };
