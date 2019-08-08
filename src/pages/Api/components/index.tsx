@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { Query } from '@pages/Api/components/Query/components';
+import { QueryContainer as Query } from '@pages/Api/components/Query/containers';
 
 const Api: FunctionComponent = () => {
   return (

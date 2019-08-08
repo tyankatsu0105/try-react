@@ -16,6 +16,10 @@ export interface GetTyankatsuRepository_user_repository {
    * The HTTP URL for this repository
    */
   url: any;
+  /**
+   * Returns a boolean indicating whether the viewing user has starred this starrable.
+   */
+  viewerHasStarred: boolean;
 }
 
 export interface GetTyankatsuRepository_user {
