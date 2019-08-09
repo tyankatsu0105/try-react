@@ -1,24 +1,21 @@
 import React, { FunctionComponent } from 'react';
-import gqlApi from '@api/graphql/queries/pages/Api.graphql';
+import gqlGetUser from '@api/graphql/queries/pages/Api/components/GetUser.graphql';
 import { useQuery } from '@apollo/react-hooks';
 import {
-  GetTyankatsuRepository,
-  GetTyankatsuRepositoryVariables,
-} from '@api/graphql/queries/pages/__generated__/GetTyankatsuRepository';
+  GetUser,
+  GetUserVariables,
+} from '@api/graphql/queries/pages/Api/components/__generated__/GetUser';
 
 import { Query } from '../components/index';
 
 export const QueryContainer: FunctionComponent = () => {
-  const variables: GetTyankatsuRepositoryVariables = {
+  const variables: GetUserVariables = {
     login: 'tyankatsu0105',
     name: 'try-react',
   };
-  const { loading, error, data, refetch } = useQuery<GetTyankatsuRepository>(
-    gqlApi,
-    {
-      variables,
-    }
-  );
+  const { loading, error, data, refetch } = useQuery<GetUser>(gqlGetUser, {
+    variables,
+  });
 
   if (loading) return <p>Loading......</p>;
   if (error) return <p>Opps! Error! {error.message}</p>;

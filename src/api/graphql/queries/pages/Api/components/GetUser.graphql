@@ -1,4 +1,4 @@
-query GetTyankatsuRepository($login: String!, $name: String!) {
+query GetUser($login: String!, $name: String!) {
   user(login: $login) {
     repository(name: $name) {
       name

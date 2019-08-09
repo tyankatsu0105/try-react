@@ -3,10 +3,10 @@
 // This file was automatically generated and should not be edited.
 
 // ====================================================
-// GraphQL query operation: GetTyankatsuRepository
+// GraphQL query operation: GetUser
 // ====================================================
 
-export interface GetTyankatsuRepository_user_repository {
+export interface GetUser_user_repository {
   readonly __typename: "Repository";
   /**
    * The name of the repository.
@@ -22,22 +22,22 @@ export interface GetTyankatsuRepository_user_repository {
   readonly viewerHasStarred: boolean;
 }
 
-export interface GetTyankatsuRepository_user {
+export interface GetUser_user {
   readonly __typename: "User";
   /**
    * Find Repository.
    */
-  readonly repository: GetTyankatsuRepository_user_repository | null;
+  readonly repository: GetUser_user_repository | null;
 }
 
-export interface GetTyankatsuRepository {
+export interface GetUser {
   /**
    * Lookup a user by login.
    */
-  readonly user: GetTyankatsuRepository_user | null;
+  readonly user: GetUser_user | null;
 }
 
-export interface GetTyankatsuRepositoryVariables {
+export interface GetUserVariables {
   readonly login: string;
   readonly name: string;
 }

@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import { Header } from '@layouts/Header';
 import { Footer } from '@layouts/Footer';
 
-import { MainProps } from '@interfaces/MainProps';
+import { MainProps } from '@modules/MainProps';
 
 const Div = styled.div`
   display: grid;

@@ -1,13 +1,10 @@
 import React, { FunctionComponent } from 'react';
-import { GetTyankatsuRepository } from '@api/graphql/queries/pages/__generated__/GetTyankatsuRepository';
-import { ObservableQuery } from 'apollo-client/core/ObservableQuery';
+import { GetUser } from '@api/graphql/queries/pages/Api/components/__generated__/GetUser';
 
-ObservableQuery;
-
-export const Query: FunctionComponent<
-  GetTyankatsuRepository & { refetch: () => void }
-> = (props) => {
-  const { user } = props;
+export const Query: FunctionComponent<GetUser & { refetch: () => void }> = (
+  props
+) => {
+  const { user, refetch } = props;
   return (
     <>
       {user && user.repository && (
@@ -18,7 +15,7 @@ export const Query: FunctionComponent<
             <li>{String(user.repository.viewerHasStarred)}</li>
           </ul>
 
-          <button type="button" onClick={() => props.refetch()}>
+          <button type="button" onClick={() => refetch()}>
             refetch
           </button>
         </>

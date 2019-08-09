@@ -43,7 +43,7 @@
     "baseUrl": "./",                       /* 相対モジュール名を解決するためのベース ディレクトリ。 */
     "paths": {
       "@src/*": ["src/*"],
-      "@interfaces/*": ["src/interfaces/*"],
+      "@modules/*": ["src/modules/*"],
       "@styles/*": ["src/styles/*"],
       "@layouts/*": ["src/layouts/*"],
       "@pages/*": ["src/pages/*"],
