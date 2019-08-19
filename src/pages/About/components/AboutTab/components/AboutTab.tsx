@@ -1,24 +1,19 @@
 import React, { FunctionComponent } from 'react';
 import { Link, Route } from 'react-router-dom';
 
-import { AboutTabItem } from './Components/AboutTabItem';
+import { AboutTabItem } from '../components/AboutTabItem';
 
-const data = [
-  {
-    id: 1,
-    name: '太郎',
-  },
-  {
-    id: 2,
-    name: '花子',
-  },
-  {
-    id: 3,
-    name: 'ジュニア',
-  },
-];
+export interface Props {
+  data: {
+    id: number;
+    name: string;
+    age: number;
+  }[];
+}
 
-const AboutTab: FunctionComponent = () => {
+export const AboutTab: FunctionComponent<Props> = (props) => {
+  const { data } = props;
+
   return (
     <>
       {data.map((item) => (
@@ -30,5 +25,3 @@ const AboutTab: FunctionComponent = () => {
     </>
   );
 };
-
-export default AboutTab;

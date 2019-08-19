@@ -26,10 +26,8 @@ const Dd = styled.dd`
   padding: 10px;
 `;
 
-interface Props {
-  id: number;
-  name: string;
-  age: number;
+interface MatchParams {
+  userId: string;
 }
 
 const data = [
@@ -50,13 +48,11 @@ const data = [
   },
 ];
 
-interface MatchParams {
-  userId: string;
-}
-
 interface Props extends RouteComponentProps<MatchParams> {}
 
-export const AboutTabItem: FunctionComponent<Props> = ({ match }) => {
+export const AboutTabItem: FunctionComponent<Props> = (props) => {
+  const { match } = props;
+
   const filterdData = useMemo(() => {
     return data.find((item) => {
       return item.id.toString() === match.params.userId;
