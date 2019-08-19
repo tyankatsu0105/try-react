@@ -1,9 +1,9 @@
-import React, { FunctionComponent, lazy, Suspense } from 'react';
+import React, { FunctionComponent, Suspense } from 'react';
 import { Redirect, Route, Switch } from 'react-router';
 
 import { Container } from '@layouts/Container';
 
-const Home = lazy(() => import('@pages/Home'));
+import { Home } from '@pages/Home';
 
 export const App: FunctionComponent = () => {
   return (
