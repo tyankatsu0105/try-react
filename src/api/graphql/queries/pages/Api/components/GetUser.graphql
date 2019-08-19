@@ -1,9 +1,0 @@
-query GetUser($login: String!, $name: String!) {
-  user(login: $login) {
-    repository(name: $name) {
-      name
-      url
-      viewerHasStarred
-    }
-  }
-}

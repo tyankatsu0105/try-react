@@ -1,5 +1,0 @@
-mutation RemoveStar($starrableId: ID!) {
-  removeStar(input: { starrableId: $starrableId }) {
-    clientMutationId
-  }
-}

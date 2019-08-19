@@ -23,30 +23,6 @@ const navLinks = [
     text: 'Home',
     path: '/',
   },
-  {
-    text: 'About',
-    path: '/about',
-  },
-  {
-    text: 'Contents',
-    path: '/contents',
-  },
-  {
-    text: 'Form',
-    path: '/form',
-  },
-  {
-    text: 'Context',
-    path: '/context',
-  },
-  {
-    text: 'Hooks',
-    path: '/hooks',
-  },
-  {
-    text: 'Api',
-    path: '/api',
-  },
 ];
 
 const navActiveStyle = {
