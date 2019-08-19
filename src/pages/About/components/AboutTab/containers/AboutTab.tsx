@@ -20,12 +20,10 @@ const data = [
   },
 ];
 
-const AboutTab: FunctionComponent = () => {
+export const AboutTab: FunctionComponent = () => {
   return (
     <>
       <AboutTabComponent data={data}></AboutTabComponent>
     </>
   );
 };
-
-export default AboutTab;
