@@ -4,27 +4,14 @@ const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const Fiber = require('fibers');
-const TerserPlugin = require('terser-webpack-plugin');
 
-const dotenv = require('./config/env');
+const dotenv = require('../env');
 
-const root = './';
+const root = path.resolve(__dirname, '../..');
 const env = dotenv();
 
 module.exports = {
   context: path.resolve(root, 'src'),
-  optimization: {
-    minimizer: [
-      new TerserPlugin({
-        terserOptions: {
-          output: {
-            comments: 'all',
-          },
-        },
-      }),
-    ],
-  },
   entry: {
     app: './index.tsx',
   },
@@ -35,35 +22,6 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        loader: 'ts-loader',
-        test: /\.ts[x]?$/,
-        options: {
-          compilerOptions: {
-            sourceMap: true,
-          },
-          configFile: 'tsconfig.json',
-        },
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              implementation: require('sass'),
-              fiber: Fiber,
-            },
-          },
-        ],
-      },
       {
         use: [{ loader: 'html-loader', options: { minimize: true } }],
         test: /\.html$/,
@@ -86,11 +44,6 @@ module.exports = {
         loader: 'graphql-tag/loader',
       },
     ],
-  },
-  devServer: {
-    contentBase: path.resolve(root, 'dist'),
-    port: 3000,
-    historyApiFallback: true,
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.html', 'graphql'],

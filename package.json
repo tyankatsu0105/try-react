@@ -2,31 +2,21 @@
   "name": "try-react-ts",
   "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "_start": "webpack-dev-server --hot --open",
-    "start": "run-p _start watch:codegen",
-    "build": "webpack --config webpack.config.js --mode=production",
-    "commit": "git-cz",
-    "precommit": "lint-staged",
+    "_start": "NODE_ENV=development webpack-dev-server --config config/webpack/webpack.config.development.js --hot --open",
+    "build": "NODE_ENV=production webpack --config config/webpack/webpack.config.production.js",
     "codegen": "apollo client:codegen --target=typescript --useReadOnlyTypes --globalTypesFile=./src/api/graphql/queries/globalTypes.ts",
+    "precommit": "lint-staged",
+    "commit": "git-cz",
+    "start": "run-p _start watch:codegen",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "watch:codegen": "apollo client:codegen --target=typescript --useReadOnlyTypes --globalTypesFile=./src/api/graphql/queries/globalTypes.ts --watch"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
   "lint-staged": {
-    "*.{tsx}": [
-      "eslint --fix",
-      "stylelint --fix --config src/.stylelintrc.js",
-      "git add"
-    ],
-    "*.{js,jsx}": [
-      "eslint --fix",
-      "git add"
-    ],
     "*.graphql": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.md": [
       "prettier --write",
       "git add"
     ],
@@ -35,10 +25,20 @@
       "stylelint --fix",
       "git add"
     ],
-    "*.md": [
-      "prettier --write",
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{tsx}": [
+      "eslint --fix",
+      "stylelint --fix --config src/.stylelintrc.js",
       "git add"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.0.0",
@@ -53,6 +53,7 @@
     "graphql-tag": "^2.10.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-transition-group": "^4.2.2"
@@ -87,7 +88,9 @@
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "lint-staged": "^9.2.1",
+    "mini-css-extract-plugin": "^0.8.0",
     "npm-run-all": "^4.1.5",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "prettier": "^1.18.2",
     "sass": "^1.22.9",
     "sass-loader": "^7.1.0",
@@ -107,6 +110,7 @@
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.1",
     "write-file-webpack-plugin": "^4.5.1"
   }
 }
