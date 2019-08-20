@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home render 1`] = `
+<body>
+  <div>
+    <p
+      class="Home"
+    >
+      Hi!!!
+    </p>
+    <p
+      class="Home Home-2"
+    >
+      This is
+    </p>
+    <p
+      id="Home"
+    >
+      Home
+    </p>
+    <small>
+      :)
+    </small>
+  </div>
+</body>
+`;

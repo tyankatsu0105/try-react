@@ -1,5 +1,5 @@
 module.exports = {
-  env: { browser: true, node: true, es6: true },
+  env: { browser: true, node: true, es6: true, jest: true },
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2018,
@@ -28,7 +28,6 @@ module.exports = {
     'prettier/standard'
   ],
   plugins: ['@typescript-eslint', 'react', 'react-hooks'],
-
   rules: {
     'no-console': 'warn',
     'no-dupe-class-members': 'off',
@@ -40,4 +39,10 @@ module.exports = {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn"
   },
+  overrides: [
+    {
+      files: ["src/**/*.spec.{ts,tsx}"],
+      extends: ["plugin:jest/recommended"]
+    }
+  ]
 };
