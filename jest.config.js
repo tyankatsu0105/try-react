@@ -14,5 +14,4 @@ module.exports = {
   moduleNameMapper: {
     '^~/(.*)$': '<rootDir>/src/$1',
   },
-  moduleDirectories: ['node_modules', '<rootDir>/config/jest'],
 };
