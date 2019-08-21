@@ -21,6 +21,9 @@ exports[`Home render 1`] = `
     <small>
       :)
     </small>
+    <p>
+      Tyankatsu-test
+    </p>
   </div>
 </body>
 `;

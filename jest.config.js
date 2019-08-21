@@ -5,6 +5,7 @@ module.exports = {
       tsConfig: 'tsconfig.test.json',
     },
   },
+  setupFiles: ['<rootDir>/config/jest/globalSetup.js'],
   collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.d.ts'],
   transform: {
     '^.+\\.tsx?$': 'ts-jest',

@@ -7,6 +7,7 @@ const Home: FunctionComponent = () => {
       <p className="Home Home-2">This is</p>
       <p id="Home">Home</p>
       <small>:)</small>
+      <p>{process.env.REACT_APP_NAME}</p>
     </>
   );
 };

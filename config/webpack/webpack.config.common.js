@@ -5,10 +5,10 @@ const WriteFilePlugin = require('write-file-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const dotenv = require('../env');
+const envPath = path.join(__dirname, '../../', `.env.${process.env.NODE_ENV}`)
+const dotenv = require('dotenv').config({path: envPath}).parsed
 
 const root = path.resolve(__dirname, '../..');
-const env = dotenv();
 
 module.exports = {
   context: path.resolve(root, 'src'),
@@ -54,7 +54,9 @@ module.exports = {
     ],
   },
   plugins: [
-    new webpack.DefinePlugin(env),
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify(dotenv)
+    }),
     new WriteFilePlugin(),
     new HtmlWebpackPlugin({
       template: './index.html',
