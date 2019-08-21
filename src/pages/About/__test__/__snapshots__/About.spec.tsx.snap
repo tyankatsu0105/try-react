@@ -1,6 +1,138 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`A render 1`] = `
+<body>
+  <div>
+    <a
+      href="/about/1"
+    >
+      太郎
+    </a>
+    <a
+      href="/about/2"
+    >
+      花子
+    </a>
+    <a
+      href="/about/3"
+    >
+      ジュニア
+    </a>
+  </div>
+</body>
+`;
+
+exports[`Ab render 1`] = `
+<body>
+  <div>
+    <a
+      href="/about/1"
+    >
+      太郎
+    </a>
+    <a
+      href="/about/2"
+    >
+      花子
+    </a>
+    <a
+      href="/about/3"
+    >
+      ジュニア
+    </a>
+  </div>
+</body>
+`;
+
+exports[`Abou render 1`] = `
+<body>
+  <div>
+    <a
+      href="/about/1"
+    >
+      太郎
+    </a>
+    <a
+      href="/about/2"
+    >
+      花子
+    </a>
+    <a
+      href="/about/3"
+    >
+      ジュニア
+    </a>
+  </div>
+</body>
+`;
+
+exports[`About render 1`] = `
+<body>
+  <div>
+    <a
+      href="/about/1"
+    >
+      太郎
+    </a>
+    <a
+      href="/about/2"
+    >
+      花子
+    </a>
+    <a
+      href="/about/3"
+    >
+      ジュニア
+    </a>
+  </div>
+</body>
+`;
+
+exports[`B render 1`] = `
+<body>
+  <div>
+    <a
+      href="/about/1"
+    >
+      太郎
+    </a>
+    <a
+      href="/about/2"
+    >
+      花子
+    </a>
+    <a
+      href="/about/3"
+    >
+      ジュニア
+    </a>
+  </div>
+</body>
+`;
+
 exports[`Home render 1`] = `
+<body>
+  <div>
+    <a
+      href="/about/1"
+    >
+      太郎
+    </a>
+    <a
+      href="/about/2"
+    >
+      花子
+    </a>
+    <a
+      href="/about/3"
+    >
+      ジュニア
+    </a>
+  </div>
+</body>
+`;
+
+exports[`render 1`] = `
 <body>
   <div>
     <a
