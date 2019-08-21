@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home render 1`] = `
+<body>
+  <div>
+    <a
+      href="/about/1"
+    >
+      太郎
+    </a>
+    <a
+      href="/about/2"
+    >
+      花子
+    </a>
+    <a
+      href="/about/3"
+    >
+      ジュニア
+    </a>
+  </div>
+</body>
+`;

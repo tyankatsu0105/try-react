@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutTabItem render 1`] = `
+<body>
+  <div>
+    <dl
+      class="css-1kbqon"
+    >
+      <div
+        class="css-1yydugk"
+      >
+        <dt
+          class="css-1q43t41"
+        >
+          名前
+        </dt>
+        <dd
+          class="css-1q43t41"
+        >
+          太郎
+        </dd>
+      </div>
+      <div
+        class="css-1yydugk"
+      >
+        <dt
+          class="css-1q43t41"
+        >
+          年齢
+        </dt>
+        <dd
+          class="css-1q43t41"
+        >
+          25
+        </dd>
+      </div>
+    </dl>
+  </div>
+</body>
+`;

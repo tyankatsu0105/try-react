@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 
-import { AboutTab } from '@pages/About/components/AboutTab';
+import { AboutTab } from './components/AboutTab';
 
 const About: FunctionComponent = () => (
   <>

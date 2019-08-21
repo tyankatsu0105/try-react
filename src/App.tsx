@@ -1,10 +1,10 @@
 import React, { FunctionComponent, Suspense } from 'react';
 import { Redirect, Route, Switch } from 'react-router';
 
-import { Container } from '@layouts/Container';
+import { Container } from '~layouts/Container';
 
-import { Home } from '@pages/Home';
-import { About } from '@pages/About';
+import { Home } from '~pages/Home';
+import { About } from '~pages/About';
 
 export const App: FunctionComponent = () => {
   return (

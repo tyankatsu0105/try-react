@@ -42,13 +42,13 @@
     "moduleResolution": "node",            /* モジュールの解決方法を指定します: 'node' (Node.js) または 'classic' (TypeScript pre-1.6)。 */
     "baseUrl": "./",                       /* 相対モジュール名を解決するためのベース ディレクトリ。 */
     "paths": {
-      "@src/*": ["src/*"],
-      "@modules/*": ["src/modules/*"],
-      "@styles/*": ["src/styles/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@pages/*": ["src/pages/*"],
-      "@assets/*": ["src/assets/*"],
-      "@api/*": ["src/api/*"],
+      "~src/*": ["src/*"],
+      "~modules/*": ["src/modules/*"],
+      "~styles/*": ["src/styles/*"],
+      "~layouts/*": ["src/layouts/*"],
+      "~pages/*": ["src/pages/*"],
+      "~assets/*": ["src/assets/*"],
+      "~api/*": ["src/api/*"],
     },                           /* 'baseUrl' の相対的な場所を検索するためにインポートを再マップする一連のエントリ。 */
     // "rootDirs": [],                        /* 結合されたコンテンツがランタイムでのプロジェクトの構成を表すルート フォルダーの一覧。 */
     "typeRoots": [

@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
 
-import { Header } from '@layouts/Header';
-import { Footer } from '@layouts/Footer';
+import { Header } from '~layouts/Header';
+import { Footer } from '~layouts/Footer';
 
-import { MainProps } from '@modules/MainProps';
+import { MainProps } from '~modules/MainProps';
 
 const Div = styled.div`
   display: grid;
