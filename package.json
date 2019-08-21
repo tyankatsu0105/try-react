@@ -52,12 +52,14 @@
     "dotenv": "^8.1.0",
     "graphql": "^14.4.2",
     "graphql-tag": "^2.10.1",
+    "grommet": "^2.7.6",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
-    "react-transition-group": "^4.2.2"
+    "react-transition-group": "^4.2.2",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.0.1",

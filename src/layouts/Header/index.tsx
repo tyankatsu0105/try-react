@@ -27,6 +27,10 @@ const navLinks = [
     text: 'About',
     path: '/about',
   },
+  {
+    text: 'Grommet',
+    path: '/grommet',
+  },
 ];
 
 const navActiveStyle = {

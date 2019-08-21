@@ -5,6 +5,7 @@ import { Container } from '~layouts/Container';
 
 import { Home } from '~pages/Home';
 import { About } from '~pages/About';
+import { Grommet } from '~pages/Grommet';
 
 export const App: FunctionComponent = () => {
   return (
@@ -12,6 +13,7 @@ export const App: FunctionComponent = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <Switch>
           <Route path="/about" component={About} />
+          <Route path="/grommet" component={Grommet} />
           <Route path="/" component={Home} />
           <Redirect to="/" />
         </Switch>
