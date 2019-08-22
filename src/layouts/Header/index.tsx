@@ -31,6 +31,10 @@ const navLinks = [
     text: 'Grommet',
     path: '/grommet',
   },
+  {
+    text: 'DummyForm',
+    path: '/dummy-form',
+  },
 ];
 
 const navActiveStyle = {

@@ -6,6 +6,7 @@ import { Container } from '~layouts/Container';
 import { Home } from '~pages/Home';
 import { About } from '~pages/About';
 import { Grommet } from '~pages/Grommet';
+import { DummyForm } from '~pages/DummyForm';
 
 export const App: FunctionComponent = () => {
   return (
@@ -14,6 +15,7 @@ export const App: FunctionComponent = () => {
         <Switch>
           <Route path="/about" component={About} />
           <Route path="/grommet" component={Grommet} />
+          <Route path="/dummy-form" component={DummyForm} />
           <Route path="/" component={Home} />
           <Redirect to="/" />
         </Switch>

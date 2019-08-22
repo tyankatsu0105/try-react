@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DummyForm snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="StyledGrommet-sc-19lkkz7-0 eUfLDp"
+    >
+      <form>
+        <div
+          class="FormField__FormFieldBox-m9hood-0 eshLKp StyledBox-sc-13pk1d4-0 CAsMy"
+        >
+          <label
+            class="StyledText-sc-1sadyjn-0 bKLvLm"
+          >
+            名前
+          </label>
+          <div
+            class="StyledBox-sc-13pk1d4-0 gZSidW"
+          >
+            <div
+              class="StyledTextInput__StyledTextInputContainer-sc-1x30a0s-1 kYQCpm"
+            >
+              <input
+                autocomplete="off"
+                class="StyledTextInput-sc-1x30a0s-0 duvNfq"
+                label="名前"
+                name="name"
+                placeholder="田中　太郎"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="FormField__FormFieldBox-m9hood-0 eshLKp StyledBox-sc-13pk1d4-0 CAsMy"
+        >
+          <label
+            class="StyledText-sc-1sadyjn-0 bKLvLm"
+          >
+            詳細
+          </label>
+          <div
+            class="StyledBox-sc-13pk1d4-0 gZSidW"
+          >
+            <textarea
+              class="StyledTextArea-sc-17i3mwp-0 gIdccB"
+              label="詳細"
+              name="description"
+              placeholder="長いテキストが入る"
+            />
+          </div>
+        </div>
+        <div
+          class="StyledBox-sc-13pk1d4-0 dNgQiZ"
+        >
+          <button
+            class="StyledButton-sc-323bzc-0 aNlbA"
+            type="submit"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+`;
