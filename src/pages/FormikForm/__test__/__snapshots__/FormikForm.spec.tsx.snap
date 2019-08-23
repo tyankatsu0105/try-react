@@ -2,6 +2,30 @@
 
 exports[`FormikForm snapshot 1`] = `
 <body>
-  <div />
+  <div>
+    <form>
+      <input
+        name="email"
+        type="email"
+        value="hogehoge@fugafuga.piyo"
+      />
+      <input
+        class="error"
+        name="social.facebook"
+        type="text"
+        value="tyankatsu-facebook"
+      />
+      <input
+        name="social.twitter"
+        type="text"
+        value="tyankatsu-twitter"
+      />
+      <button
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
 </body>
 `;
