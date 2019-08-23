@@ -35,6 +35,10 @@ const navLinks = [
     text: 'DummyForm',
     path: '/dummy-form',
   },
+  {
+    text: 'FormikForm',
+    path: '/formik-form',
+  },
 ];
 
 const navActiveStyle = {

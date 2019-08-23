@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, FormEvent } from 'react';
 import { Helmet } from 'react-helmet';
 import {
   Box,
@@ -9,6 +9,33 @@ import {
   Button,
 } from 'grommet';
 
+const initialValues = {
+  name: '',
+  description: '',
+  email: '',
+};
+
+interface InitialValues {
+  value: {
+    name: string;
+    description: string;
+    email: string;
+  };
+}
+
+const nameValidation = { regexp: /\w{1,}/, message: '文字列のみ' };
+const descriptionValidation = {
+  regexp: /hoge/,
+  message: 'hogeのみ受け付けます',
+};
+const emailValidation = {
+  regexp: /[^\s]@[^\s]/,
+  message: '正しいものをば',
+};
+
+const printValues = (event: FormEvent<HTMLFormElement> & InitialValues) =>
+  console.log(event.value);
+
 const DummyForm: FunctionComponent = () => {
   return (
     <>
@@ -16,24 +43,32 @@ const DummyForm: FunctionComponent = () => {
         <title>This is DummyForm</title>
       </Helmet>
 
-      <GForm>
+      <GForm onSubmit={printValues} value={initialValues}>
         <FormField
           label="名前"
           name="name"
           placeholder="田中　太郎"
           component={TextInput}
-          validate={{ regexp: /hoge/, message: 'hogeのみ受け付けます' }}
+          validate={nameValidation}
         />
         <FormField
           label="詳細"
           name="description"
           placeholder="長いテキストが入る"
           component={TextArea}
-          validate={{ regexp: /fuga/, message: 'fugaのみ受け付けます' }}
+          validate={descriptionValidation}
+        />
+        <FormField
+          label="メールアドレス"
+          name="email"
+          placeholder="メールアドレス"
+          component={TextInput}
+          validate={emailValidation}
         />
         <Box align="center">
           <Button type="submit" primary label="Submit" />
         </Box>
+        {initialValues.name}
       </GForm>
     </>
   );
