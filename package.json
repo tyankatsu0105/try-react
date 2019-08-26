@@ -10,6 +10,7 @@
     "start": "run-p _start watch:codegen",
     "test": "jest",
     "gen:pages": "hygen generate pages",
+    "gen:shared": "hygen generate shared",
     "watch:codegen": "apollo client:codegen --target=typescript --useReadOnlyTypes --globalTypesFile=./src/api/graphql/queries/globalTypes.ts --watch"
   },
   "lint-staged": {

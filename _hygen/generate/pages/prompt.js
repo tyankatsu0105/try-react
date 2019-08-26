@@ -2,6 +2,6 @@ module.exports = [
   {
     type: 'input',
     name: 'name',
-    message: 'page name (pascal case) =>',
+    message: 'File name (pascal case) =>',
   },
 ];
