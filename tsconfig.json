@@ -45,7 +45,7 @@
       "~src/*": ["src/*"],
       "~modules/*": ["src/modules/*"],
       "~styles/*": ["src/styles/*"],
-      "~layouts/*": ["src/layouts/*"],
+      "~shared/*": ["src/shared/*"],
       "~pages/*": ["src/pages/*"],
       "~assets/*": ["src/assets/*"],
       "~api/*": ["src/api/*"],

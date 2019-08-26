@@ -1,5 +1,5 @@
 ---
-to: src/shared/<%= dir %>/<%= h.changeCase.pascalCase(name) %>/__test__/<%= h.changeCase.pascalCase(name) %>.spec.ts
+to: src/shared/<%= dir %>/<%= h.changeCase.pascalCase(name) %>/__test__/<%= h.changeCase.pascalCase(name) %>.spec.tsx
 ---
 import React from 'react';
 import { render } from '@testing-library/react';

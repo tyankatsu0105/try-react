@@ -3,6 +3,8 @@ import { Redirect, Route, Switch } from 'react-router';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
 
+import { Navigation } from '~shared/components/Navigation';
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     progress: {
@@ -27,13 +29,15 @@ export const App: FunctionComponent = () => {
         </div>
       }
     >
-      <Switch>
-        <Route path="/about" component={About} />
-        <Route path="/formik-form" component={FormikForm} />
-        <Route path="/material" component={Material} />
-        <Route path="/" component={Home} />
-        <Redirect to="/" />
-      </Switch>
+      <Navigation>
+        <Switch>
+          <Route path="/about" component={About} />
+          <Route path="/formik-form" component={FormikForm} />
+          <Route path="/material" component={Material} />
+          <Route path="/" component={Home} />
+          <Redirect to="/" />
+        </Switch>
+      </Navigation>
     </Suspense>
   );
 };

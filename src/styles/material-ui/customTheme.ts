@@ -1,4 +1,4 @@
-import { green } from '@material-ui/core/colors';
+import { purple } from '@material-ui/core/colors';
 import { createMuiTheme } from '@material-ui/core/styles';
 
 import '~styles/core/variables.scss';
@@ -9,7 +9,7 @@ import '~styles/core/variables.scss';
  */
 export const customTheme = createMuiTheme({
   palette: {
-    primary: green,
+    primary: purple,
   },
   typography: {
     fontFamily: ['"Noto Sans JP"', 'Roboto', '"Helvetica Neue"', 'Arial'].join(
