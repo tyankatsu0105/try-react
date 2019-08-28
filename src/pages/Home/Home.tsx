@@ -16,15 +16,8 @@ import {
   FormGroup,
   Checkbox,
   Button,
+  Switch,
 } from '@material-ui/core';
-
-interface FormValues {
-  user: string;
-  email: string;
-  gender: string;
-  animal: string;
-  colors: string[];
-}
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -57,6 +50,21 @@ const animals = ['犬', '猫', '狐', 'ラッコ', 'aaaaaaaaaaaaaaaaaaaaaa'];
 
 const colors = ['赤', 'オレンジ', '黄', '緑', '青', '紫'];
 
+const option1 = false;
+const option2 = false;
+const option3 = true;
+
+interface FormValues {
+  user: string;
+  email: string;
+  gender: string;
+  animal: string;
+  colors: string[];
+  option1: boolean;
+  option2: boolean;
+  option3: boolean;
+}
+
 const Home: FunctionComponent = () => {
   const classes = useStyles();
 
@@ -69,6 +77,9 @@ const Home: FunctionComponent = () => {
       gender: '男性',
       animal: '',
       colors: [],
+      option1,
+      option2,
+      option3,
     },
     validationSchema: Yup.object().shape({
       user: Yup.string()
@@ -111,7 +122,6 @@ const Home: FunctionComponent = () => {
               {touched.user && errors.user ? errors.user : 'ユーザー名を入力'}
             </FormHelperText>
           </FormControl>
-
           <FormControl error={touched.email && errors.email ? true : false}>
             <InputLabel htmlFor="email">メールアドレス</InputLabel>
             <Input
@@ -129,7 +139,6 @@ const Home: FunctionComponent = () => {
                 : 'メールアドレスを入力'}
             </FormHelperText>
           </FormControl>
-
           <FormControl>
             <FormLabel component="legend">性別</FormLabel>
             <RadioGroup
@@ -151,7 +160,6 @@ const Home: FunctionComponent = () => {
 
             <FormHelperText id="gender">性別を選択</FormHelperText>
           </FormControl>
-
           <FormControl error={touched.animal && errors.animal ? true : false}>
             <InputLabel htmlFor="animal">好きな動物</InputLabel>
             <Select
@@ -170,11 +178,8 @@ const Home: FunctionComponent = () => {
               ))}
             </Select>
           </FormControl>
-
           <FormControl error={touched.colors && errors.colors ? true : false}>
-            <FormLabel component="legend" htmlFor="colors">
-              好きな色
-            </FormLabel>
+            <FormLabel htmlFor="colors">好きな色</FormLabel>
             {colors.map((color) => (
               <FormControlLabel
                 key={color}
@@ -196,6 +201,48 @@ const Home: FunctionComponent = () => {
                 ? errors.colors
                 : '好きな色を選択'}
             </FormHelperText>
+          </FormControl>
+          <FormControl>
+            <FormLabel htmlFor="options">チェックリスト</FormLabel>
+            <FormGroup>
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={values.option1}
+                    onChange={handleChange}
+                    value={values.option1}
+                    name="option1"
+                    id="option1"
+                  />
+                }
+                label="option1"
+              />
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={values.option2}
+                    onChange={handleChange}
+                    value={values.option2}
+                    name="option2"
+                    id="option2"
+                  />
+                }
+                label="option2"
+              />
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={values.option3}
+                    onChange={handleChange}
+                    value={values.option3}
+                    name="option3"
+                    id="option3"
+                  />
+                }
+                label="option3"
+              />
+            </FormGroup>
+            <FormHelperText>Be careful</FormHelperText>
           </FormControl>
 
           <Button type="submit">submit</Button>
