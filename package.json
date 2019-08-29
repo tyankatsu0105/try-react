@@ -4,7 +4,7 @@
   "scripts": {
     "_start": "NODE_ENV=development webpack-dev-server --config config/webpack/webpack.config.development.js --hot --open",
     "build": "NODE_ENV=production webpack --config config/webpack/webpack.config.production.js",
-    "codegen": "apollo client:codegen --target=typescript --useReadOnlyTypes --globalTypesFile=./src/api/graphql/queries/globalTypes.ts",
+    "codegen": "NODE_ENV=development apollo client:codegen --target=typescript --useReadOnlyTypes --globalTypesFile=./src/api/graphql/queries/globalTypes.ts",
     "precommit": "lint-staged",
     "commit": "git-cz",
     "start": "run-p _start watch:codegen",

@@ -30,6 +30,10 @@ const menus = [
     path: '/formik-form',
     text: 'formikフォーム',
   },
+  {
+    path: '/github-query',
+    text: 'GitHub Query',
+  },
 ];
 
 const useStyles = makeStyles((theme: Theme) =>

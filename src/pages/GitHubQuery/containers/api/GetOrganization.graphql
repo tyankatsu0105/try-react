@@ -1,0 +1,11 @@
+query GetOrganization($login: String!, $first: Int!) {
+  organization(login: $login) {
+    repositories(first: $first) {
+      nodes {
+        name
+        url
+        description
+      }
+    }
+  }
+}

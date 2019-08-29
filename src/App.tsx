@@ -17,6 +17,7 @@ import { Home } from '~pages/Home';
 import { About } from '~pages/About';
 import { FormikForm } from '~pages/FormikForm';
 import { Material } from '~pages/Material';
+import { GitHubQuery } from '~pages/GitHubQuery';
 
 export const App: FunctionComponent = () => {
   const classes = useStyles();
@@ -34,6 +35,7 @@ export const App: FunctionComponent = () => {
           <Route path="/about" component={About} />
           <Route path="/formik-form" component={FormikForm} />
           <Route path="/material" component={Material} />
+          <Route path="/github-query" component={GitHubQuery} />
           <Route path="/" component={Home} />
           <Redirect to="/" />
         </Switch>
