@@ -12,7 +12,7 @@ exports[`Home render 1`] = `
   "option1": false,
   "option2": false,
   "option3": true,
-  "date": "2019-08-28T05:46:39.701Z"
+  "date": "2019-08-29T06:01:59.395Z"
 }
     <form
       autocomplete="off"
@@ -828,19 +828,19 @@ exports[`Home render 1`] = `
             class="MuiFormControl-root MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-error Mui-error MuiFormLabel-filled"
               data-shrink="true"
             >
               公開年月日
             </label>
             <div
-              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd"
+              class="MuiInputBase-root MuiInput-root MuiInput-underline Mui-error Mui-error MuiInputBase-formControl MuiInput-formControl MuiInputBase-adornedEnd"
             >
               <input
-                aria-invalid="false"
+                aria-invalid="true"
                 class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"
                 type="text"
-                value="2019/08/28"
+                value="2019/08/29"
               />
               <div
                 class="MuiInputAdornment-root MuiInputAdornment-positionEnd"
@@ -875,7 +875,11 @@ exports[`Home render 1`] = `
                 </button>
               </div>
             </div>
-            
+            <p
+              class="MuiFormHelperText-root Mui-error MuiFormHelperText-filled"
+            >
+              Date should not be before minimal date
+            </p>
           </div>
           <div
             class="MuiFormControl-root MuiTextField-root"
@@ -893,7 +897,7 @@ exports[`Home render 1`] = `
                 aria-invalid="false"
                 class="MuiInputBase-input MuiInput-input MuiInputBase-inputAdornedEnd"
                 type="text"
-                value="14:46"
+                value="15:01"
               />
               <div
                 class="MuiInputAdornment-root MuiInputAdornment-positionEnd"

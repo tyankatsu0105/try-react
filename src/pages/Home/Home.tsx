@@ -64,7 +64,7 @@ const option1 = false;
 const option2 = false;
 const option3 = true;
 
-const date = new Date();
+const date = new Date('2019-08-29T06:01:59.395Z');
 
 interface FormValues {
   user: string;

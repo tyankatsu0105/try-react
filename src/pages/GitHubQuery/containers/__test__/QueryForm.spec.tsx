@@ -1,12 +1,12 @@
 import React from 'react';
+
 import { render } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
 import '@testing-library/jest-dom/extend-expect';
 
 import { MockedProvider } from '@apollo/react-testing';
-import gqlGetOrganization from '../containers/api/GetOrganization.graphql';
+import gqlGetOrganization from '../api/GetOrganization.graphql';
 
-import GitHubQuery from '../GitHubQuery';
+import { QueryForm } from '../QueryForm';
 
 const mocks = [
   {
@@ -36,15 +36,14 @@ const mocks = [
   },
 ];
 
-describe('GitHubQuery', () => {
-  it('snapshot', () => {
+describe('QueryForm', () => {
+  it('render', () => {
     const { baseElement } = render(
       <MockedProvider mocks={mocks} addTypename={false}>
-        <MemoryRouter initialEntries={['/']}>
-          <GitHubQuery />
-        </MemoryRouter>
+        <QueryForm />
       </MockedProvider>
     );
+
     expect(baseElement).toMatchSnapshot();
   });
 });

@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "types": ["jest", "node"]
+    "types": ["jest", "webpack-env"]
   },
   
   "include": ["**/*.spec.tsx", "**/*.spec.ts"]

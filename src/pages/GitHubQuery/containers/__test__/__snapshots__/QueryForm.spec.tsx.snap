@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GitHubQuery snapshot 1`] = `
+exports[`QueryForm render 1`] = `
 <body>
   <div>
     <form
